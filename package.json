@@ -1,0 +1,30 @@
+{
+  "name": "draft-js-plugins-ide",
+  "version": "0.0.0",
+  "description": "IDE Features for DraftJS",
+  "main": "lib/index.cjs.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/asmr-hex/draft-js-plugins-ide"
+  },
+  "keywords": [
+    "editor",
+    "wysiwyg",
+    "draft",
+    "react",
+    "react-component",
+    "ide",
+    "autocomplete",
+    "highlighting",
+    "interpreter"
+  ],
+  "author": "asmr.hex",
+  "license": "CC0-1.0"
+}
