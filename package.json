@@ -18,7 +18,7 @@
     "autocomplete",
     "highlighting",
     "interpreter",
-    "live code",
+    "live code"
   ],
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
