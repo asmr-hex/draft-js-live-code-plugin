@@ -8,10 +8,12 @@ module.exports = [
       index: './examples/src/index.js',
     },
     resolve: {
-      extensions: ['.ts', '.tsx', '.js'],
+      extensions: ['.ts', '.tsx', '.js', '.jsx'],
     },
     devtool: 'inline-source-map',
     devServer: {
+      publicPath: '/',
+      historyApiFallback: true,
       contentBase: path.resolve(__dirname, './examples/dist'),
     },
     module: {
