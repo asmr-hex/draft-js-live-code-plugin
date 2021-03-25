@@ -12,7 +12,7 @@
 /docs
 
 # production
-/dist
+/examples/dist
 /lib
 
 # misc
