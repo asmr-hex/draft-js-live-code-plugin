@@ -31,12 +31,15 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "concurrently \"npm run watch:lib\" \"npm run watch:examples\"",
+    "start": "concurrently \"npm run watch:lib\" \"npm run watch:examples\" \"npm run watch:docs\"",
     "watch:examples": "npm run build:lib && npx webpack serve --open",
     "watch:lib": "npx tsc --watch",
+    "watch:docs": "npx typedoc --watch",
+    "watch:test": "npx jest --watch",
     "build:lib": "npx tsc",
     "build:examples": "npx webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:docs": "npx typedoc",
+    "test": "npx jest --coverage"
   },
   "peerDependencies": {
     "draft-js": "^0.11.0",

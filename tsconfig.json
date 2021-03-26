@@ -13,6 +13,7 @@
     "target": "es5",
     "module": "esnext",
     "lib": [ "esnext" ],
+    "jsx": "react",
     "strict": true,
     "allowJs": true,
     "declaration": true,

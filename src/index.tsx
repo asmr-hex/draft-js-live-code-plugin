@@ -1,16 +1,21 @@
 import { EditorPlugin, PluginFunctions } from '@draft-js-plugins/editor'
 
+import { Decorator } from './decorator'
 
-export const createLiveCodePlugin = ({ }) => {
+/**
+ * Creates a Live Code DraftJS Plugin.
+ */
+export const createLiveCodePlugin = ({ }): EditorPlugin => {
+    // instantiate a new live code decorator
+    const decorator = new Decorator()
 
     return {
         onChange: (newEditorState: Draft.EditorState, pluginFunctions: PluginFunctions) => {
-            const decorator = newEditorState.getDecorator()
-
             if (decorator === null) return newEditorState
 
-            return decorator.suggest(newEditorState)
+            // on change, we potentially insert/update/remove an inline suggested completion.
+            return decorator.updateInlineSuggestion(newEditorState)
         },
-        decorators: []
+        decorators: [decorator]
     }
 }
