@@ -5,8 +5,11 @@ export const createLiveCodePlugin = ({ }) => {
 
     return {
         onChange: (newEditorState: Draft.EditorState, pluginFunctions: PluginFunctions) => {
-            console.log('umm')
-            return newEditorState
+            const decorator = newEditorState.getDecorator()
+
+            if (decorator === null) return newEditorState
+
+            return decorator.suggest(newEditorState)
         },
         decorators: []
     }

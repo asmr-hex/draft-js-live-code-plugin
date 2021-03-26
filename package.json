@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "concurrently \"npm run watch:lib\" \"npm run watch:examples\"",
-    "watch:examples": "npx webpack serve --open",
+    "watch:examples": "npm run build:lib && npx webpack serve --open",
     "watch:lib": "npx tsc --watch",
     "build:lib": "npx tsc",
     "build:examples": "npx webpack",

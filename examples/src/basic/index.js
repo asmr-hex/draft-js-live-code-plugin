@@ -16,9 +16,7 @@ export const BasicExample = props => {
     () => EditorState.createEmpty()
   )
 
-  const onChange = newEditorState => {
-    setEditorState(newEditorState)
-  }
+  const onChange = newEditorState => setEditorState(newEditorState)
   
   return (
     <div>
